@@ -1,14 +1,16 @@
 import discord
 from discord.ext import commands
-import music
+from discord import FFmpegPCMAudio
+import Musica
 
-cogs = [musica]
+cogs = [Musica]
 
-client = commands.Bot(command_prefix="!", intents = discord.Intents)
+intents = discord.Intents().all()
+client = commands.Bot(command_prefix="!", intents = discord.Intents.all())
 
 for i in range(len(cogs)):
     cogs[i].setup(client)
 
 
 
-client.run("OTEwNzIxNzkyOTA4MzQ5NDUw.YZW9ww.oO2TBV5VGymevX4E7ECdy54NhzQ")
+client.run("OTEwNzIxNzkyOTA4MzQ5NDUw.YZW9ww.jsp6z_BGYWBw8mIrmvjvJoBIVkc")
