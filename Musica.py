@@ -36,6 +36,16 @@ class musica(commands.Cog):
             url2 = info['formats'][0]['url']
             ctx.voice_client.play(vc.play(discord.FFmpegPCMAudio(executable = r"C:\Users\Comercia\Desktop\ffmpeg-2021-11-15-git-9e8cdb24cd-full_build\bin\ffmpeg.exe ", source = url2)))
 
+
+    ydl_opts = {
+        'format': 'bestaudio/best',
+        'postprocessors': [{
+        'key': 'FFmpegExtractAudio',
+        'preferredcodec': 'mp3',
+        'preferredquality': '192',
+    }],
+   }
+           
 #Creacion del comando !play
     @commands.command()
     async def pause(self,ctx):
