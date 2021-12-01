@@ -59,7 +59,15 @@ class musica(commands.Cog):
         await ctx.send("Sigue la musica")
 #Creacion del comando !resume
 
-
+    @commands.command()
+    async def info(self, ctx):
+      await ctx.send("!join para iniciar el bot\n"
+        "!disconnect para finalizar el bot\n"
+        "!play seguido del link de Youtube para reproducir la musica\n"
+        "!pause para pausar la musica\n"
+        "!resume para continuar con la musica")
+#Comando que muestras los comandos disponibles dentro del bot
+   
 def setup(client):
     client.add_cog(musica(client))
 #Se define el cliente para poder correr el token de la aplicación
